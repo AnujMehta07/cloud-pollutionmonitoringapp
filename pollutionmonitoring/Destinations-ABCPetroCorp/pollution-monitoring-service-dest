@@ -1,0 +1,10 @@
+#
+#Thu Oct 20 10:38:23 UTC 2016
+Name=pollution-monitoring-service-dest
+# URL = <<Insert your java app subscription URL>>  
+URL=https\://mfplantapphcpappsprog-c72d35027.ap1.hana.ondemand.com/multitenancyapp
+ProxyType=Internet
+Type=HTTP
+CloudConnectorVersion=2
+WebIDEEnabled=true
+Authentication=AppToAppSSO
