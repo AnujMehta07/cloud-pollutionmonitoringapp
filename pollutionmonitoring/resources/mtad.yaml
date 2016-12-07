@@ -29,4 +29,4 @@ resources:
    - name: hana32-service
      type: com.sap.hcp.persistence
      parameters:
-       id: hana32
+       id: <<Insert your DB ID>>
