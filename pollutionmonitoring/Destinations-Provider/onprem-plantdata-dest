@@ -1,0 +1,8 @@
+#
+#Thu Oct 20 10:38:17 UTC 2016
+Name=onprem-plantdata-dest
+URL=http://abcpetrocorp:443/ABCPetroCorp/
+ProxyType=OnPremise
+Type=HTTP
+CloudConnectorVersion=2
+Authentication=NoAuthentication
