@@ -127,13 +127,12 @@ public class PollutionDataService {
 			Map<String, DataSource> properties = new HashMap<String, DataSource>();
 			DataSource ds = this.getDataSource();
 			properties.put(PersistenceUnitProperties.NON_JTA_DATASOURCE, ds);
-			retVal = Persistence.createEntityManagerFactory("multitenancyapp", properties);
+			retVal = Persistence.createEntityManagerFactory("pollutionmonitoring", properties);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 		return retVal;
 	}
-
 	@GET
 	@Path("/plantdata/")
 	@Produces({ MediaType.APPLICATION_JSON })
@@ -268,7 +267,7 @@ public class PollutionDataService {
 		int size = plantPollutionDayDataList.size();
 		int i = 0;
 		int j = 5;
-		int k = 1;
+		int k = 0;
 		while (size > 0) {
 			companyPollutionData.getPlantsPollutionWeeklyData().put(Integer.toString(k),
 					plantPollutionDayDataList.subList(i, j));
@@ -283,10 +282,10 @@ public class PollutionDataService {
 	private boolean isUserAdmin(HttpServletRequest request)
 			throws PersistenceException, UnsupportedUserAttributeException {
 		String plant_id = getPlantId(request);
-		if (request.getUserPrincipal() != null && request.isUserInRole("admin")) {
+		if (request.getUserPrincipal() != null && request.isUserInRole("AreaManager")) {
 			if (plant_id == null) { // this means he is the admin
 				return true;
-			} else if (request.getUserPrincipal() != null && request.isUserInRole("user"))
+			} else if (request.getUserPrincipal() != null && request.isUserInRole("PlantSupervisor"))
 				if (plant_id != null) {
 					return false;
 				}

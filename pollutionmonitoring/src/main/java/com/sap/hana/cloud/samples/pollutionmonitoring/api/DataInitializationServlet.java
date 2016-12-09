@@ -36,7 +36,7 @@ public class DataInitializationServlet extends HttpServlet {
 			throws ServletException, IOException {	
 		
 		String parameter = request.getParameter(COMPANY_NAME);
-		List plantList = null;
+		List<Plant> plantList = null;
 		if(parameter.equalsIgnoreCase(ABC_PETRO_CORP))
 		{
 		 fillPlantData("101","0.018","SAINT JOHN WEST","2016-10-09");
@@ -83,7 +83,7 @@ public class DataInitializationServlet extends HttpServlet {
 	}
 
 	
-	private List fillPlantData(String id, String o3,String location,String dateString ) {
+	private List<Plant> fillPlantData(String id, String o3,String location,String dateString ) {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		java.sql.Date date = null;
 		Date parsed;
@@ -106,7 +106,7 @@ public class DataInitializationServlet extends HttpServlet {
 		em.getTransaction().begin();
 		em.persist(plant);
 		em.getTransaction().commit();
-		List retVal =em.createNamedQuery("Plants").getResultList();
+		List<Plant> retVal =em.createNamedQuery("Plants").getResultList();
 		return retVal;
 	}
 	private EntityManagerFactory getEntityManagerFactory() {
@@ -115,7 +115,7 @@ public class DataInitializationServlet extends HttpServlet {
 			Map<String, DataSource> properties = new HashMap<String, DataSource>();
 			DataSource ds = this.getDataSource();
 			properties.put(PersistenceUnitProperties.NON_JTA_DATASOURCE, ds);
-			retVal = Persistence.createEntityManagerFactory("multitenancyapp", properties);
+			retVal = Persistence.createEntityManagerFactory("pollutionmonitoring", properties);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}

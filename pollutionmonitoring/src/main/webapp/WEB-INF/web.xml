@@ -30,7 +30,7 @@
   </resource-ref>
   <servlet>
     <servlet-name>DataInitializationServlet</servlet-name>
-    <servlet-class>com.sap.hana.cloud.samples.mfplantapp.api.DataInitializationServlet</servlet-class>
+    <servlet-class>com.sap.hana.cloud.samples.pollutionmonitoring.api.DataInitializationServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DataInitializationServlet</servlet-name>
@@ -42,8 +42,8 @@
     <init-param>
       <param-name>jaxrs.serviceClasses</param-name>
       <param-value>
-				com.sap.hana.cloud.samples.mfplantapp.api.PlantDataService,
-				com.sap.hana.cloud.samples.mfplantapp.api.PollutionDataService
+				com.sap.hana.cloud.samples.pollutionmonitoring.api.PlantDataService,
+				com.sap.hana.cloud.samples.pollutionmonitoring.api.PollutionDataService
 			</param-value>
     </init-param>
     <init-param>
@@ -71,9 +71,9 @@
     <auth-method>FORM</auth-method>
   </login-config>
   <security-role>
-    <role-name>user</role-name>
+    <role-name>PlantSupervisor</role-name>
   </security-role>
   <security-role>
-    <role-name>admin</role-name>
+    <role-name>AreaManager</role-name>
   </security-role>
 </web-app>
