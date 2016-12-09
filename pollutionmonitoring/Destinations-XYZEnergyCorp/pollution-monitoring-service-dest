@@ -2,7 +2,6 @@
 #Thu Oct 20 10:42:02 UTC 2016
 Name=pollution-monitoring-service-dest
 # URL = <<Insert your java app subscription URL>>
-URL=https://pollutionmonitoringa23068541-a52ae1bf9.hana.ondemand.com/pollutionmonitoring/
 ProxyType=Internet
 Type=HTTP
 CloudConnectorVersion=2
