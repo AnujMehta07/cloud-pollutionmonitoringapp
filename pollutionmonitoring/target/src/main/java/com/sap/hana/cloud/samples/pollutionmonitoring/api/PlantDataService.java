@@ -8,13 +8,16 @@ import java.net.MalformedURLException;
 import java.net.Proxy;
 import java.net.URL;
 import java.text.MessageFormat;
+
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+
+import org.apache.http.HttpEntity;
+
 import com.sap.cloud.account.TenantContext;
 import com.sap.core.connectivity.api.configuration.ConnectivityConfiguration;
 import com.sap.core.connectivity.api.configuration.DestinationConfiguration;
