@@ -136,8 +136,7 @@ public class DataInitializationServlet extends HttpServlet {
 
 	private String getTenantId() {
 		TenantContext tenantContext = getTenantContext();
-		Tenant tenant = tenantContext.getTenant();
-		String tenantId = tenant.getId().trim();
+		String tenantId = tenantContext.getTenantId().trim();
 		return tenantId;
 	}
 

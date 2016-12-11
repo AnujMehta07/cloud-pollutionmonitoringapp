@@ -110,7 +110,7 @@ public class PlantDataService {
         if (ON_PREMISE_PROXY.equals(proxyType)) {
             // Insert header for on-premise connectivity with the consumer account Id
             urlConnection.setRequestProperty("SAP-Connectivity-ConsumerAccount",
-                    getTenantContext().getTenant().getAccount().getId());
+                    getTenantContext().getAccountName());
         }
     }
 	
