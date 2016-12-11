@@ -6,12 +6,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<properties>
-		<java-version>1.8</java-version>
+		<java-version>1.7</java-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<org.slf4j-version>1.7.2</org.slf4j-version>
-
-		<com.sap.cloud.neo.api-version>1.106.11</com.sap.cloud.neo.api-version>
-
+		<com.sap.cloud.neo.api-version>1.76.13</com.sap.cloud.neo.api-version>
 		<org.apache.cxf-version>3.0.0</org.apache.cxf-version>
 		<org.codehaus.jackson-version>1.9.9</org.codehaus.jackson-version>
 	</properties>
@@ -30,7 +28,9 @@
 	</repositories>
 
 	<dependencies>
-		<dependency>
+	
+	    <!-- This is pointing to Java Web Tomcat 8, changing to Java Web -->
+		<!-- <dependency>
 			<groupId>com.sap.cloud</groupId>
 			<artifactId>neo-java-web-api</artifactId>
 			<version>3.12.4.3</version>
@@ -41,7 +41,21 @@
 					<groupId>javax.persistence</groupId>
 				</exclusion>
 			</exclusions>
+		</dependency> -->
+		
+		<dependency>
+			<groupId>com.sap.cloud</groupId>
+			<artifactId>neo-java-web-api</artifactId>
+			<version>${com.sap.cloud.neo.api-version}</version>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>persistence-api</artifactId>
+					<groupId>javax.persistence</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
+		
 
 		<!-- Servlet -->
 		<dependency>
