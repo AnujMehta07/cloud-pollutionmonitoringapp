@@ -35,11 +35,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.http.HttpEntity;
 import org.eclipse.persistence.config.PersistenceUnitProperties;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.sap.cloud.account.Tenant;
 import com.sap.cloud.account.TenantContext;
 import com.sap.cloud.crypto.keystore.api.KeyStoreService;
 import com.sap.core.connectivity.api.configuration.ConnectivityConfiguration;

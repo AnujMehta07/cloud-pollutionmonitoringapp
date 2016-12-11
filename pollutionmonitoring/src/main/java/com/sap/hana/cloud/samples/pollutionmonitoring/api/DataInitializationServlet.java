@@ -21,7 +21,6 @@ import javax.sql.DataSource;
 
 import org.eclipse.persistence.config.PersistenceUnitProperties;
 
-import com.sap.cloud.account.Tenant;
 import com.sap.cloud.account.TenantContext;
 import com.sap.hana.cloud.samples.pollutionmonitoring.model.Plant;
 
