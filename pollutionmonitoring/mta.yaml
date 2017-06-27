@@ -6,6 +6,8 @@ modules:
   - name: pollutionmonitoringui
     type: com.sap.hcp.html5
     path: web
+    requires:
+     - name: pollutiondata-service
     parameters:
       name: pollutionmonitoringui
       version: '1' 
@@ -19,13 +21,14 @@ modules:
         ignore: [ pom.xml, target/]
     parameters:
       name: pollutionmonitoring    
-   
     requires:
-     - name: hana32-service
+     - name: db-service
+    provides:
+     - name: pollutiondata-service
     
 
 resources:
-   - name: hana32-service
+   - name: db-service
      type: com.sap.hcp.persistence
      parameters:
-       id: hana32
+       id: <Insert your DB ID>
