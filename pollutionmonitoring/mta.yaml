@@ -1,0 +1,31 @@
+_schema-version: '2.1'
+ID: com.sap.cloud.sample.pollutionmonitoring
+version: '0.1.0'
+
+modules:
+  - name: pollutionmonitoringui
+    type: com.sap.hcp.html5
+    path: web
+    parameters:
+      name: pollutionmonitoringui
+      version: '1' 
+   
+  - name: pollutionmonitoring-java
+    type: java
+    path: java
+    build-parameters:
+        maven-opts:
+          command: [ clean, verify ]
+        ignore: [ pom.xml, target/]
+    parameters:
+      name: pollutionmonitoring    
+   
+    requires:
+     - name: hana32-service
+    
+
+resources:
+   - name: hana32-service
+     type: com.sap.hcp.persistence
+     parameters:
+       id: hana32

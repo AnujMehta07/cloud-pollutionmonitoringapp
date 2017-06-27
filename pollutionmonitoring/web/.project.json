@@ -1,0 +1,14 @@
+{
+  "mockpreview": {
+    "mockUri": "",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "hcpdeploy": {
+    "account": "a23068541",
+    "name": "pollutionmonitoringui",
+    "lastVersionWeTriedToDeploy": "6"
+  }
+}

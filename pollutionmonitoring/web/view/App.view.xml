@@ -1,0 +1,8 @@
+<mvc:View controllerName="com.sap.hcp.samples.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+             xmlns:layout="sap.ui.layout" xmlns="sap.m">
+              <App>
+              	<pages>
+              		<Page id="rootPage" title="{plantsDetail>/companyName/0}" />
+              	</pages>
+              </App>
+</mvc:View>

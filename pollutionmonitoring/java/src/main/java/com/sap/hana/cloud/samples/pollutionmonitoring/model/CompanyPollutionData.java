@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CompanyPollutionData {
 	
-	HashMap<String, List<PlantPollutionDayData>> plantsPollutionWeeklyData =new HashMap<>(); 
+	HashMap<String, List<PlantPollutionDayData>> plantsPollutionWeeklyData =new HashMap<String, List<PlantPollutionDayData>>(); 
 	
 	public HashMap<String, List<PlantPollutionDayData>> getPlantsPollutionWeeklyData() {
 		return plantsPollutionWeeklyData;

@@ -226,7 +226,7 @@ public class PollutionDataService {
 			throws Exception {
 		HttpsURLConnection urlConnection = null;
 		CompanyPollutionData companyPollutionData = new CompanyPollutionData();
-		List<PlantPollutionDayData> plantPollutionDayDataList = new ArrayList<>();
+		List<PlantPollutionDayData> plantPollutionDayDataList = new ArrayList<PlantPollutionDayData>();
 		// Look up the connectivity configuration API
 		javax.naming.Context ctx = new InitialContext();
 		ConnectivityConfiguration configuration = (ConnectivityConfiguration) ctx
