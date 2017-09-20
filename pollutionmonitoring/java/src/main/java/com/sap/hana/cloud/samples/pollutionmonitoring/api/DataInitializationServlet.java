@@ -38,43 +38,43 @@ public class DataInitializationServlet extends HttpServlet {
 		List<Plant> plantList = null;
 		if(parameter.equalsIgnoreCase(ABC_PETRO_CORP))
 		{
-		 fillPlantData("101","0.018","SAINT JOHN WEST","2016-10-09");
-		 fillPlantData("101","0.021","SAINT JOHN WEST","2016-10-10");
-		 fillPlantData("101","0.023","SAINT JOHN WEST","2016-10-11");
-		 fillPlantData("101","0.024","SAINT JOHN WEST","2016-10-12");
-		 fillPlantData("101","0.027","SAINT JOHN WEST","2016-10-13");
+		 fillPlantData("101","0.018","SAINT JOHN WEST","2017-09-11");
+		 fillPlantData("101","0.021","SAINT JOHN WEST","2017-09-12");
+		 fillPlantData("101","0.023","SAINT JOHN WEST","2017-09-13");
+		 fillPlantData("101","0.024","SAINT JOHN WEST","2017-09-14");
+		 fillPlantData("101","0.027","SAINT JOHN WEST","2017-09-15");
 		 
-		 fillPlantData("102","0.019","ALGOMA","2016-10-09");
-		 fillPlantData("102","0.022","ALGOMA","2016-10-10");
-		 fillPlantData("102","0.025","ALGOMA","2016-10-11");
-		 fillPlantData("102","0.026","ALGOMA","2016-10-12");
-		 fillPlantData("102","0.027","ALGOMA","2016-10-13");
+		 fillPlantData("102","0.019","ALGOMA","2017-09-11");
+		 fillPlantData("102","0.022","ALGOMA","2017-09-12");
+		 fillPlantData("102","0.025","ALGOMA","2017-09-13");
+		 fillPlantData("102","0.026","ALGOMA","2017-09-14");
+		 fillPlantData("102","0.027","ALGOMA","2017-09-15");
 		 
-		 fillPlantData("103","0.021","Burnaby South","2016-10-09");
-		 fillPlantData("103","0.022","Burnaby South","2016-10-10");
-		 fillPlantData("103","0.023","Burnaby South","2016-10-11");
-		 fillPlantData("103","0.025","Burnaby South","2016-10-12");
-		 plantList = fillPlantData("103","0.028","Burnaby South","2016-10-13");
+		 fillPlantData("103","0.021","Burnaby South","2017-09-11");
+		 fillPlantData("103","0.022","Burnaby South","2017-09-12");
+		 fillPlantData("103","0.023","Burnaby South","2017-09-13");
+		 fillPlantData("103","0.025","Burnaby South","2017-09-14");
+		 plantList = fillPlantData("103","0.028","Burnaby South","2017-09-15");
 		}
 		else if(parameter.equalsIgnoreCase(XYZ_ENERGY_CORP)){
 			 
-			 fillPlantData("201","0.027","Hamshire C64","2016-10-09");
-			 fillPlantData("201","0.023","Hamshire C64","2016-10-10");
-			 fillPlantData("201","0.021","Hamshire C64","2016-10-11");
-			 fillPlantData("201","0.025","Hamshire C64","2016-10-12");
-			 fillPlantData("201","0.019","Hamshire C64","2016-10-13");
+			 fillPlantData("201","0.027","Hamshire C64","2017-09-11");
+			 fillPlantData("201","0.023","Hamshire C64","2017-09-12");
+			 fillPlantData("201","0.021","Hamshire C64","2017-09-13");
+			 fillPlantData("201","0.025","Hamshire C64","2017-09-14");
+			 fillPlantData("201","0.019","Hamshire C64","2017-09-15");
 			 
-			 fillPlantData("202","0.021","Garyville","2016-10-09");
-			 fillPlantData("202","0.025","Garyville","2016-10-10");
-			 fillPlantData("202","0.022","Garyville","2016-10-11");
-			 fillPlantData("202","0.021","Garyville","2016-10-12");
-			 fillPlantData("202","0.023","Garyville","2016-10-13");
+			 fillPlantData("202","0.021","Garyville","2017-09-11");
+			 fillPlantData("202","0.025","Garyville","2017-09-12");
+			 fillPlantData("202","0.022","Garyville","2017-09-13");
+			 fillPlantData("202","0.021","Garyville","2017-09-14");
+			 fillPlantData("202","0.023","Garyville","2017-09-15");
 			 
-			 fillPlantData("203","0.023","Arlington Municipal","2016-10-09");
-			 fillPlantData("203","0.021","Arlington Municipal","2016-10-10");
-			 fillPlantData("203","0.019","Arlington Municipal","2016-10-11");
-			 fillPlantData("203","0.027","Arlington Municipal","2016-10-12");
-			 plantList = fillPlantData("203","0.028","Arlington Municipal","2016-10-13");
+			 fillPlantData("203","0.023","Arlington Municipal","2017-09-11");
+			 fillPlantData("203","0.021","Arlington Municipal","2017-09-12");
+			 fillPlantData("203","0.019","Arlington Municipal","2017-09-13");
+			 fillPlantData("203","0.027","Arlington Municipal","2017-09-14");
+			 plantList = fillPlantData("203","0.028","Arlington Municipal","2017-09-15");
 			 
 		}
 		response.getWriter().println(plantList);
